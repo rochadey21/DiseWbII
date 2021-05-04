@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylosP3.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="contenedor">
+        <form action="">
+            <h2>Exponente</h2>
+            <input id="numero1" type="text">
+            <p>+</p>
+            <input id="numero2" type="text">
+            <p>=</p>
+            <input id="resultado" type="text" readonly>
+            <input type="button" class="btn" onclick="sumar()" value="Resultado">
+        </form>
+    </div>
+
+    <script>
+        function sumar(numero1,numero2)
+        {
+            var num1=parseFloat(document.getElementById('numero1').value);
+            var num2=parseFloat(document.getElementById('numero2').value);
+            var res1=1
+            for (var i=0; i<num2; i++)
+            {
+                res1=res1*num1;            
+            }
+            document.getElementById('resultado').value=res1;
+        }
+    </script>
+
+<div class="contenedor">
+
+    <form action="">
+        <h2>Factorial</h2>
+        <input id="nume1" type="text">
+        <p>=</p>
+        <input id="resulta" type="text" readonly>
+        <input type="button" class="btn" onclick="factorial()" value="Resulta">
+    </form>
+</div>
+
+<script>
+    function factorial(nume1)
+    {
+        var num1=parseFloat(document.getElementById('nume1').value);
+        var resulta=1
+        for (var i=num1; i>0; i--)
+        {
+            resulta*=i;       
+        }
+        document.getElementById('resulta').value=resulta;
+    }     
+</script>
+
+<div class="contenedor">
+    <form action="">
+        <h2>  PAR O IMPAR </h2>
+        <input id="numero3" type="text">
+        <p>+</p>
+        <input id="numero4" type="text">
+        <p>=</p>
+        <input id="resultad" type="text" readonly>
+        <input type="button" class="btn" onclick="ParImpar()" value="Resultad">        
+    </form>
+</div>
+
+<script>
+    function ParImpar(numero3,numero4)
+    {
+        var num1=parseFloat(document.getElementById('numero3').value);
+        var num2=parseFloat(document.getElementById('numero4').value);        
+            res1=num1+num2;            
+        
+        if(res1%2==0){
+            res1=('par');
+            document.getElementById('resultad').value=res1;
+        }
+        else{
+            res1=('impar');
+            document.getElementById('resultad').value=res1;
+        }
+    }
+</script>
+
+<div class="contenedor">
+    <form action="">
+        <h2>Mostrar  el numero del medio</h2>
+        <input id="numero5" type="text">
+        <input id="numero6" type="text">
+        <input id="numero7" type="text">
+      <p>=</p>
+       <input id="res1" type="text">
+        <input type="button" class="btn" onclick="centro()" value="Resultado">
+    </form>
+</div>
+
+<script>
+    function centro(numero1,numero2,numero3)
+    {
+        var num1=parseFloat(document.getElementById('numero5').value);
+        var num2=parseFloat(document.getElementById('numero6').value);
+        var num3=parseFloat(document.getElementById('numero7').value);
+        var res1=(num2);
+        document.getElementById("res1").value=res1; 
+    }
+</script>
+</body>
+</html>
